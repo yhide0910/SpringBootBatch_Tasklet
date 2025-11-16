@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context id="context1" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+    <jdbcConnection connectionURL="jdbc:postgresql://localhost:5432/tdb01" driverClass="org.postgresql.Driver" password="tuser01" userId="tuser01" />
+    <javaModelGenerator targetPackage="com.hide1963.test01.model" targetProject="src/main/java" />
+    <sqlMapGenerator targetPackage="com.hide1963.test01.mapper" targetProject="test01/src/main/resources" />
+    <javaClientGenerator targetPackage="com.hide1963.test01.mapper" targetProject="src/main/java" type="XMLMAPPER" />
+    <table schema="public" tableName="%">
+
+    </table>
+  </context>
+</generatorConfiguration>

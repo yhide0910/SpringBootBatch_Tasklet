@@ -1,0 +1,169 @@
+{
+  "groups": [
+    {
+      "name": "batch.metadata.datasource",
+      "type": "com.hide1963.test01.config.props.BatchMetadataDataSourceProperties",
+      "sourceType": "com.hide1963.test01.config.props.BatchMetadataDataSourceProperties"
+    },
+    {
+      "name": "batch.metadata.datasource.hikari",
+      "type": "com.hide1963.test01.config.props.BatchMetadataDataSourceProperties$Hikari",
+      "sourceType": "com.hide1963.test01.config.props.BatchMetadataDataSourceProperties",
+      "sourceMethod": "public com.hide1963.test01.config.props.BatchMetadataDataSourceProperties.Hikari getHikari() "
+    },
+    {
+      "name": "batch.metadata.datasource.xa",
+      "type": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Xa",
+      "sourceType": "com.hide1963.test01.config.props.BatchMetadataDataSourceProperties",
+      "sourceMethod": "public org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.Xa getXa() "
+    },
+    {
+      "name": "spring.datasource",
+      "type": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties",
+      "sourceType": "com.hide1963.test01.config.BatchDataSourceConfig",
+      "sourceMethod": "public org.springframework.boot.autoconfigure.jdbc.DataSourceProperties applicationDataSourceProperties() "
+    },
+    {
+      "name": "spring.datasource.xa",
+      "type": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Xa",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties",
+      "sourceMethod": "public org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.Xa getXa() "
+    }
+  ],
+  "properties": [
+    {
+      "name": "batch.metadata.datasource.driver-class-name",
+      "type": "java.lang.String",
+      "sourceType": "com.hide1963.test01.config.props.BatchMetadataDataSourceProperties"
+    },
+    {
+      "name": "batch.metadata.datasource.embedded-database-connection",
+      "type": "org.springframework.boot.jdbc.EmbeddedDatabaseConnection",
+      "sourceType": "com.hide1963.test01.config.props.BatchMetadataDataSourceProperties"
+    },
+    {
+      "name": "batch.metadata.datasource.generate-unique-name",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.hide1963.test01.config.props.BatchMetadataDataSourceProperties"
+    },
+    {
+      "name": "batch.metadata.datasource.hikari.idle-timeout",
+      "type": "java.lang.Long",
+      "sourceType": "com.hide1963.test01.config.props.BatchMetadataDataSourceProperties$Hikari"
+    },
+    {
+      "name": "batch.metadata.datasource.hikari.maximum-pool-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.hide1963.test01.config.props.BatchMetadataDataSourceProperties$Hikari"
+    },
+    {
+      "name": "batch.metadata.datasource.hikari.minimum-idle",
+      "type": "java.lang.Integer",
+      "sourceType": "com.hide1963.test01.config.props.BatchMetadataDataSourceProperties$Hikari"
+    },
+    {
+      "name": "batch.metadata.datasource.hikari.pool-name",
+      "type": "java.lang.String",
+      "sourceType": "com.hide1963.test01.config.props.BatchMetadataDataSourceProperties$Hikari"
+    },
+    {
+      "name": "batch.metadata.datasource.jndi-name",
+      "type": "java.lang.String",
+      "sourceType": "com.hide1963.test01.config.props.BatchMetadataDataSourceProperties"
+    },
+    {
+      "name": "batch.metadata.datasource.name",
+      "type": "java.lang.String",
+      "sourceType": "com.hide1963.test01.config.props.BatchMetadataDataSourceProperties"
+    },
+    {
+      "name": "batch.metadata.datasource.password",
+      "type": "java.lang.String",
+      "sourceType": "com.hide1963.test01.config.props.BatchMetadataDataSourceProperties"
+    },
+    {
+      "name": "batch.metadata.datasource.type",
+      "type": "java.lang.Class<? extends javax.sql.DataSource>",
+      "sourceType": "com.hide1963.test01.config.props.BatchMetadataDataSourceProperties"
+    },
+    {
+      "name": "batch.metadata.datasource.url",
+      "type": "java.lang.String",
+      "sourceType": "com.hide1963.test01.config.props.BatchMetadataDataSourceProperties"
+    },
+    {
+      "name": "batch.metadata.datasource.username",
+      "type": "java.lang.String",
+      "sourceType": "com.hide1963.test01.config.props.BatchMetadataDataSourceProperties"
+    },
+    {
+      "name": "batch.metadata.datasource.xa.data-source-class-name",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Xa"
+    },
+    {
+      "name": "batch.metadata.datasource.xa.properties",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Xa"
+    },
+    {
+      "name": "spring.datasource.driver-class-name",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.embedded-database-connection",
+      "type": "org.springframework.boot.jdbc.EmbeddedDatabaseConnection",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.generate-unique-name",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.jndi-name",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.name",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.password",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.type",
+      "type": "java.lang.Class<? extends javax.sql.DataSource>",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.url",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.username",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.xa.data-source-class-name",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Xa"
+    },
+    {
+      "name": "spring.datasource.xa.properties",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Xa"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

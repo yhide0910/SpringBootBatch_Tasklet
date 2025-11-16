@@ -1,0 +1,84 @@
+spring:
+  datasource:
+    # アプリケーション用のデータソース(PostgreSQL)
+    url: jdbc:postgresql://localhost:5432/tdb01
+    username: tuser01
+    password: tuser01
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 30000
+      pool-name: HikariBatchPool
+
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration
+
+  batch:
+    jdbc:
+      initialize-schema: never
+    job:
+      enabled: false  # CommandLineRunner で手動実行するため無効化
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true  # 追加: 外部からのアクセスを許可（ローカル開発用）
+
+# Batchメタデータ用H2データソース（カスタムプロパティ）
+batch:
+  metadata:
+    datasource:
+      url: jdbc:h2:file:./data/batch_metadata
+      username: sa
+      password: 
+      driver-class-name: org.h2.Driver
+      hikari:
+        maximum-pool-size: 5
+        minimum-idle: 2
+        pool-name: HikariH2BatchPool
+
+logging:
+  level:
+    "[com.hide1963.test01]": DEBUG
+    "[com.hide1963.test01.mapper]": DEBUG
+    "[org.springframework.batch]": DEBUG
+
+server:
+  port: 8081
+
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+# === 注意メモ（PostgreSQL の BATCH_* テーブル削除について）===
+# 1) 以下が確認できれば PostgreSQL のメタデータ管理テーブルは削除して問題なし
+#    - 起動ログに「using meta data indicating: H2」
+#    - ./data/batch_metadata.mv.db が存在
+#    - 再起動後も H2 に履歴が保持される
+# 2) 履歴が必要なら削除前にバックアップを取得してください
+# 3) PostgreSQL の削除例（必要に応じて実行）
+#    -- テーブル（依存関係順を考慮）
+#    DROP TABLE IF EXISTS BATCH_STEP_EXECUTION_CONTEXT CASCADE;
+#    DROP TABLE IF EXISTS BATCH_STEP_EXECUTION CASCADE;
+#    DROP TABLE IF EXISTS BATCH_JOB_EXECUTION_CONTEXT CASCADE;
+#    DROP TABLE IF EXISTS BATCH_JOB_EXECUTION_PARAMS CASCADE;
+#    DROP TABLE IF EXISTS BATCH_JOB_EXECUTION CASCADE;
+#    DROP TABLE IF EXISTS BATCH_JOB_INSTANCE CASCADE;
+#    -- シーケンス
+#    DROP SEQUENCE IF EXISTS BATCH_STEP_EXECUTION_SEQ;
+#    DROP SEQUENCE IF EXISTS BATCH_JOB_EXECUTION_SEQ;
+#    DROP SEQUENCE IF EXISTS BATCH_JOB_SEQ;
+# ===============================================
+
+
+
